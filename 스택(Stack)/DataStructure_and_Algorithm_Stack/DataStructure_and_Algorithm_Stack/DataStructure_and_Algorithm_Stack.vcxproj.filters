@@ -28,4 +28,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\리액트_스터디\React_study\first_week_study\.gitignore" />
+  </ItemGroup>
 </Project>
