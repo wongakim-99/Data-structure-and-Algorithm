@@ -20,22 +20,25 @@
 '''
 
 # 노드 클래스 정의
+# 1. Node 클래스 : 각 노드를 나타내는 클래스. 각 노드는 data와 next라는 두 가지 속성을 지님
 class Node:
     def __init__(self, data):
-        self.data = data
-        self.next = None
+        self.data = data    # data는 노드에 저장된 데이터를 나타냄
+        self.next = None    # next는 다음 노드를 가리키는 링크, 초기에 next는 None로 설정됨
 
 # 연결 리스트 구현
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self.head = None   # head 속성은 리스트의 첫 번째 노드를 가리킴. 초기에 head는 None로 설정됨
 
-    def append(self, data):
+    def append(self, data): 
+        # 이 메소드는 연결 리스트의 끝에 새로운 노드를 추가함
+        # 만약 리스트가 비어 있다면 head를 새 노드로 설정함.
         if not self.head:
             self.head = Node(data)
         else:
             current = self.head
-            while current.next: # current.next가 존재하지 않을 때 까지 next를 하기
+            while current.next: # 리스트의 끝을 찾아서(current.next가 None이 될 때까지)그곳에 새 노드를 추가함
                 current = current.next
             current.next = Node(data)
     
@@ -52,3 +55,9 @@ linked_list.append(3)
 linked_list.append(4)
 
 linked_list.print_list()
+
+'''
+위의 코드에서 LinkedList 클래스는 head를 속성으로 가짐. 이 head는 리스트의 첫 번째 노드를 참조함.
+이 head는 리스트의 첫 번째 노드를 참조. append 메소드는 리스트의 끝에 새 노드를 추가하고, print_list메소드는 
+리스트의 모든 노드를 출력함
+'''
