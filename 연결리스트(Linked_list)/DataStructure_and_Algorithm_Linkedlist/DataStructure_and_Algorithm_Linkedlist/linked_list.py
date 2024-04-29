@@ -27,6 +27,8 @@ class Node:
         self.next = None    # next는 다음 노드를 가리키는 링크, 초기에 next는 None로 설정됨
 
 # 연결 리스트 구현
+# 2. LinkedList 클래스 : 이 클래스는 연결 리스트 자체를 표현함. head 속성은 리스트의 첫 번째 노드를 가리킴.
+# 초기에 next는 None으로 설정됨
 class LinkedList:
     def __init__(self):
         self.head = None   # head 속성은 리스트의 첫 번째 노드를 가리킴. 초기에 head는 None로 설정됨
